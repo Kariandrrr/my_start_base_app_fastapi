@@ -1,4 +1,5 @@
 from typing import AsyncGenerator
+import logging
 
 from sqlalchemy.ext.asyncio import (
     create_async_engine,
@@ -8,6 +9,8 @@ from sqlalchemy.ext.asyncio import (
 )
 
 from core.config import settings
+
+log = logging.getLogger(__name__)
 
 
 class DBHelper:
